@@ -5,14 +5,14 @@ function add(a, b) {
 sum = add(4, 6);
 console.log(sum);
 
-function multiply(n) {
-  for (i = 0, i < 4; i++) {
-      add(n)
-  }
-  return n
-  }
-
-
+// function multiply(n) {
+//   let i = 0;
+//   while (i < n) {
+//     add(num);
+//     i++;
+//   }
+//   return num;
+// }
 
 // multiple = multiply(4, 6);
 // console.log(multiple);
