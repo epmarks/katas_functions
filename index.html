@@ -3,34 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Nobody Likes Math</title>
   </head>
   <body>
-    Addition
-    <br />
-    <input id="add1" type="text" placeholder="First Number" />
-    <input id="add2" type="text" placeholder="Second Number" />
-    <button id="add-button">Add!</button><br />
-    <span id="add-total">Total:</span><br /><br />
+    <div class="container">
+      <div class="addition">
+        Addition
+        <br />
+        <input id="add1" type="text" placeholder="First Number" />
+        <input id="add2" type="text" placeholder="Second Number" />
+        <button id="add-button">Add!</button><br />
+        Total: <span id="add-total"></span><br /><br />
+      </div>
 
-    Multiplication<br />
-    <input type="text" placeholder="First Number" id="mult1" />
-    <input type="text" placeholder="Second Number" id="mult2" />
-    <button id="multiply-button">Multiply!</button><br />
-    <span id="multiply-total">Total:</span><br /><br />
+      <div class="multiplication">
+        Multiplication<br />
+        <input type="text" placeholder="First Number" id="mult1" />
+        <input type="text" placeholder="Second Number" id="mult2" />
+        <button id="multiply-button">Multiply!</button><br />
+        Total: <span id="multiply-total"></span><br /><br />
+      </div>
 
-    Power/Exponentiation <br />
-    <input type="text" placeholder="First Number" id="pow1" />
-    <input type="text" placeholder="Second Number" id="pow2" />
-    <button id="power-button">Get The Power!</button><br />
-    <span id="power-total">Total:</span><br /><br />
+      <div class="power">
+        Power/Exponentiation <br />
+        <input type="text" placeholder="Number" id="pow1" />
+        <input type="text" placeholder="To What Power" id="pow2" />
+        <button id="power-button">Get The Power!</button><br />
+        Total: <span id="power-total"></span><br /><br />
+      </div>
 
-    Factorial <br />
-    <input type="text" placeholder="Number" id="fact" />
-    <button id="fact-button">Factor!</button><br />
-    <span id="factor-total">Total:</span><br /><br />
+      <div class="factor">
+        Factorial <br />
+        <input type="text" placeholder="Number" id="fact" />
+        <button id="factor-button">Factor!</button><br />
+        Total: <span id="factor-total"></span><br /><br />
+      </div>
 
-    <button id="reset-button">Reset All Values</button>
+      <div class="fibonacci">
+        Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21 <br />
+        <input type="text" placeholder="Select a place 1-9" id="fibo" />
+        <button id="fibonacci-button">Fibo?!</button><br />
+        Selected Number: <span id="selected-number"></span><br /><br />
+      </div>
+
+      <button id="reset-button">Reset All Values</button>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
