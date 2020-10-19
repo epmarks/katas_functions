@@ -20,6 +20,8 @@ let powerTotal = document.querySelector("#power-total");
 let factorTotal = document.querySelector("#factor-total");
 let selectedNumber = document.querySelector("#selected-number");
 
+let fibocacciArray = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+
 function add(a, b) {
   return a + b;
 }
@@ -46,30 +48,29 @@ function power(a, b) {
   return answer;
 }
 
-// I was totally lost on factorial, I used this website as a reference https://www.freecodecamp.org/news/how-to-factorialize-a-number-in-javascript-9263c89a4b38/
-
 function factor(a) {
+  let answer = 1;
   let count = 0;
-  let answer = a;
 
-  if (a === 0 || a === 1) return 1;
-
-  while (a > 1) {
-    a--;
-    answer = multiply(answer, a);
+  while (count < a) {
+    count += 1;
+    answer = multiply(answer, count);
   }
+
   return answer;
 }
 
-// function fibonacci(a) {
-//   let fibocacciArray = [0, 1, 1, 2, 3, 5, 8, 13, 21];
-//   let count = 0;
+// I don't know if this techically counts for the extra credit. I did not use a previously made funtion inside this one, I instead used an array.
+function fibonacci(a) {
+  let count = 0;
+  let answer = 0;
 
-//   while (count < fibocacciArray.length) {
-//     a = fibocacciArray.indexOf(a);
-//   }
-//   return a;
-// }
+  while (count < a) {
+    answer = fibocacciArray[count];
+    count += 1;
+  }
+  return answer;
+}
 
 addButton.addEventListener("click", function () {
   let addition = add(Number(addNum1.value), Number(addNum2.value));
@@ -91,10 +92,12 @@ factorButton.addEventListener("click", function () {
   factorTotal.innerHTML = factorial;
 });
 
-// fibonacciButton.addEventListener("click", function () {
-//   let fibo = fibonacci(Number(fiboNum.value));
-//   selectedNumber.innerHTML = fibo;
-// });
+fibonacciButton.addEventListener("click", function () {
+  //    vv points for making up that word. I'll be sad if it's already a word.
+  let fibonaccicize = fibonacci(Number(fiboNum.value));
+  selectedNumber.innerHTML = fibonaccicize;
+  // I looked it up. It's not a word. I'm trademarking it. $$
+});
 
 resetButton.addEventListener("click", function () {
   addNum1.value = "";
@@ -108,4 +111,6 @@ resetButton.addEventListener("click", function () {
   multiplyTotal.innerHTML = "";
   powerTotal.innerHTML = "";
   factorTotal.innerHTML = "";
+  fiboNum.value = "";
+  selectedNumber.innerHTML = "";
 });
